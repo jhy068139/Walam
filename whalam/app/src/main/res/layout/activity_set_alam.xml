@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        android:id="@+id/topMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ImageView
+            android:id="@+id/backIcon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+        </ImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintVertical_weight="10"
+        android:id="@+id/listView"
+        android:background="#B3FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_weight="1"
+                android:text="현제 연결되어 있는 WIFI"
+                android:id="@+id/NowText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <ListView
+                android:layout_weight="3"
+
+                android:id="@+id/NowList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+            </ListView>
+            <TextView
+                android:layout_weight="1"
+
+                android:text="연결 가능한 WIFI"
+                android:id="@+id/AbText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <ListView
+                android:layout_weight="15"
+
+                android:id="@+id/AbList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+            </ListView>
+            <TextView
+                android:layout_weight="1"
+
+                android:text="연결 했던 WIFI"
+                android:id="@+id/PvText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <view class="androidx.appcompat.app.AlertController$RecycleListView"
+                android:layout_weight="15"
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+            </view>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
